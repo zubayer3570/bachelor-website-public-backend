@@ -9,10 +9,10 @@ const client = new MongoClient('mongodb+srv://database-user-1:databaseofzubayer@
 const run = () => {
     try {
         client.connect()
-        const expenseCollection = client.db("bachelor's-website").collection('expense-collection')
-        const personCollection = client.db("bachelor's-website").collection('person-collection')
-        const accountsCollection = client.db("bachelor's-website").collection('accounts-collection')
-        const otherExpensesCollection = client.db("bachelor's-website").collection('other-expenses-collection')
+        const expenseCollection = client.db("bachelor's-website-public").collection('expense-collection')
+        const personCollection = client.db("bachelor's-website-public").collection('person-collection')
+        const accountsCollection = client.db("bachelor's-website-public").collection('accounts-collection')
+        const otherExpensesCollection = client.db("bachelor's-website-public").collection('other-expenses-collection')
         //post
         app.post('/add-expense', async (req, res) => {
             const data = req.body;
